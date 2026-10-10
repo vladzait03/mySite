@@ -1,0 +1,21 @@
+.catalogPage {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+
+  .subtitle {
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+  }
+}
+
+.catalogGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}

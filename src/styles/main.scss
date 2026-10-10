@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+:root {
+  --bg-color: #f4f7f6;
+  --surface-color: #ffffff;
+  --text-primary: #1a1a1a;
+  --text-secondary: #5a6268;
+  --border-color: #e0e0e0;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --accent-color: #e63946;
+  --accent-hover: #c1121f;
+  --header-bg: #ffffff;
+}
+
+[data-theme='dark'] {
+  --bg-color: #121212;
+  --surface-color: #1e1e1e;
+  --text-primary: #f8f9fa;
+  --text-secondary: #a0aab2;
+  --border-color: #2d2d2d;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --accent-color: #e63946;
+  --accent-hover: #ff4d5a;
+  --header-bg: #1a1a1a;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+// Глобальная кнопка (используется на разных страницах)
+.btn-primary {
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+
+  &:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-2px);
+  }
+}
