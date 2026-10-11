@@ -7,10 +7,12 @@ import Compare from './pages/Compare/Compare';
 import About from './pages/About/About';
 import Contacts from './pages/Contacts/Contacts';
 import TruckDetails from './pages/TruckDetails/TruckDetails';
+import RouteTracker from './components/RouteTracker/RouteTracker';
 
 function App() {
   return (
     <>
+      <RouteTracker />
       <Navbar />
       <main>
         <Routes>
