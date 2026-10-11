@@ -51,12 +51,15 @@
   border-radius: 12px;
   box-shadow: var(--shadow);
   border: 1px solid var(--border-color);
+  // Плавная прокрутка на тач-устройствах
+  -webkit-overflow-scrolling: touch;
 }
 
 .compareTable {
   width: 100%;
   border-collapse: collapse;
   text-align: left;
+  min-width: 600px; // чтобы таблица не сжималась
 
   th, td {
     padding: 18px 24px;
@@ -81,6 +84,79 @@
 
   .winner {
     font-weight: 700;
-    color: #2a9d8f; // Зеленый цвет для победителя
+    color: #2a9d8f;
+  }
+}
+
+// ============ ПЛАНШЕТЫ ============
+@media (max-width: 1024px) {
+  .comparePage {
+    padding: 50px 20px;
+
+    h1 {
+      font-size: 2.1rem;
+    }
+  }
+
+  .selectors select {
+    width: 220px;
+  }
+}
+
+// ============ МОБИЛЬНЫЕ ============
+@media (max-width: 768px) {
+  .comparePage {
+    padding: 40px 15px;
+
+    h1 {
+      font-size: 1.8rem;
+    }
+
+    .subtitle {
+      margin-bottom: 25px;
+      font-size: 0.95rem;
+    }
+  }
+
+  .selectors {
+    flex-direction: column;
+    gap: 12px;
+
+    select {
+      width: 100%;
+      max-width: 320px;
+    }
+
+    .vs {
+      font-size: 1.2rem;
+    }
+  }
+
+  .compareTable {
+    min-width: 500px;
+
+    th, td {
+      padding: 12px 14px;
+      font-size: 0.9rem;
+    }
+
+    th {
+      font-size: 0.95rem;
+    }
+
+    td:first-child {
+      width: 40%;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .compareTable {
+    min-width: 460px;
+
+    th, td {
+      padding: 10px 12px;
+      font-size: 0.85rem;
+    }
   }
 }

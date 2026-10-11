@@ -44,3 +44,38 @@
 .submitBtn {
   align-self: flex-start;
 }
+
+// ============ ПЛАНШЕТЫ И МОБИЛЬНЫЕ ============
+@media (max-width: 1024px) {
+  .contactsPage {
+    padding: 50px 20px;
+  }
+
+  .title {
+    font-size: 2.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contactsPage {
+    padding: 40px 15px;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+  }
+
+  .input, .textarea {
+    padding: 12px;
+    font-size: 0.95rem;
+  }
+
+  .submitBtn {
+    align-self: stretch;
+    width: 100%;
+  }
+}

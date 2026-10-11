@@ -30,12 +30,20 @@
   padding: 0;
 }
 
+html {
+  // Плавная прокрутка и корректный размер шрифта на мобильных
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
   background-color: var(--bg-color);
   color: var(--text-primary);
   font-family: 'Inter', sans-serif;
   transition: background-color 0.3s ease, color 0.3s ease;
   line-height: 1.6;
+  // Убираем горизонтальный скролл на мобильных
+  overflow-x: hidden;
 }
 
 a {
@@ -43,7 +51,12 @@ a {
   color: inherit;
 }
 
-// Глобальная кнопка (используется на разных страницах)
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 .btn-primary {
   display: inline-block;
   background-color: var(--accent-color);
@@ -53,10 +66,19 @@ a {
   font-weight: 600;
   border: none;
   cursor: pointer;
+  font-size: 1rem;
   transition: background-color 0.2s ease, transform 0.1s ease;
 
   &:hover {
     background-color: var(--accent-hover);
     transform: translateY(-2px);
+  }
+}
+
+// Медиазапросы для очень маленьких экранов — уменьшаем базовые отступы
+@media (max-width: 480px) {
+  .btn-primary {
+    padding: 10px 20px;
+    font-size: 0.9rem;
   }
 }

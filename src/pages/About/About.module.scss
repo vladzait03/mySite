@@ -16,3 +16,32 @@
   color: var(--text-secondary);
   line-height: 1.6;
 }
+
+// ============ ПЛАНШЕТЫ И МОБИЛЬНЫЕ ============
+@media (max-width: 1024px) {
+  .aboutPage {
+    padding: 50px 20px;
+  }
+
+  .title {
+    font-size: 2.1rem;
+  }
+
+  .text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutPage {
+    padding: 40px 15px;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .text {
+    font-size: 0.95rem;
+  }
+}

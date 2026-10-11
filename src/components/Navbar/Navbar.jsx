@@ -1,25 +1,46 @@
 import { Link } from 'react-router-dom';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { ThemeContext } from '../../context/ThemeContext';
 import styles from './Navbar.module.scss';
 
 export default function Navbar() {
   const { theme, toggleTheme } = useContext(ThemeContext);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const closeMenu = () => setMenuOpen(false);
 
   return (
     <nav className={styles.navbar}>
       <div className={styles.navContent}>
-        <Link to="/" className={styles.logo}>Truck<span>Specs</span></Link>
-        <div className={styles.navLinks}>
-          <Link to="/">Главная</Link>
-          <Link to="/catalog">Каталог</Link>
-          <Link to="/compare">Сравнение</Link>
-          <Link to="/about">О нас</Link>
-          <Link to="/contacts">Контакты</Link>
+        <Link to="/" className={styles.logo} onClick={closeMenu}>
+          Авто<span>Груз</span>
+        </Link>
+
+        {/* Основные ссылки (на десктопе) */}
+        <div className={`${styles.navLinks} ${menuOpen ? styles.open : ''}`}>
+          <Link to="/" onClick={closeMenu}>Главная</Link>
+          <Link to="/catalog" onClick={closeMenu}>Каталог</Link>
+          <Link to="/compare" onClick={closeMenu}>Сравнение</Link>
+          <Link to="/about" onClick={closeMenu}>О нас</Link>
+          <Link to="/contacts" onClick={closeMenu}>Контакты</Link>
         </div>
-        <button className={styles.themeBtn} onClick={toggleTheme} aria-label="Сменить тему">
-          {theme === 'light' ? '🌙' : '☀️'}
-        </button>
+
+        <div className={styles.rightBlock}>
+          <button className={styles.themeBtn} onClick={toggleTheme} aria-label="Сменить тему">
+            {theme === 'light' ? '🌙' : '☀️'}
+          </button>
+
+          {/* Бургер для мобильных */}
+          <button
+            className={`${styles.burger} ${menuOpen ? styles.burgerOpen : ''}`}
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Открыть меню"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
       </div>
     </nav>
   );

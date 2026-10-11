@@ -1,0 +1,53 @@
+.footer {
+  background-color: var(--surface-color);
+  border-top: 1px solid var(--border-color);
+  padding: 20px;
+  text-align: center;
+  margin-top: 40px;
+  color: var(--text-secondary);
+}
+
+.counters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.counter {
+  display: inline-block;
+
+  img {
+    border: 0;
+    vertical-align: middle;
+  }
+}
+
+.copyright {
+  font-size: 0.9rem;
+}
+
+// ============ МОБИЛЬНЫЕ ============
+@media (max-width: 768px) {
+  .footer {
+    padding: 15px;
+    margin-top: 30px;
+  }
+
+  .counters {
+    gap: 10px;
+  }
+
+  .copyright {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .counters {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
