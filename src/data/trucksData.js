@@ -21,6 +21,11 @@ export const trucks = [
     fuelTank: 1480,
     consumption: 32,
     payload: 25,
+    cabin: 'Globetrotter XXL',
+    wheelFormula: '6x4',
+    gearbox: 'I-Shift 12-ст. АКПП',
+    maxSpeed: 120,
+    year: 2024,
     image: volvoFh16
   },
   {
@@ -34,6 +39,11 @@ export const trucks = [
     fuelTank: 1000,
     consumption: 28,
     payload: 24,
+    cabin: 'Topline',
+    wheelFormula: '4x2',
+    gearbox: 'Opticruise 12-ст. АКПП',
+    maxSpeed: 110,
+    year: 2023,
     image: scaniaR500
   },
   {
@@ -47,6 +57,11 @@ export const trucks = [
     fuelTank: 700,
     consumption: 30,
     payload: 20,
+    cabin: 'Высокая, со спальным местом',
+    wheelFormula: '4x2',
+    gearbox: 'ZF TraXon 12-ст. АКПП',
+    maxSpeed: 100,
+    year: 2023,
     image: kamaz54901
   },
   {
@@ -60,6 +75,11 @@ export const trucks = [
     fuelTank: 1200,
     consumption: 29,
     payload: 25,
+    cabin: 'TGX XLX',
+    wheelFormula: '6x2',
+    gearbox: 'TipMatic 12-ст. АКПП',
+    maxSpeed: 115,
+    year: 2024,
     image: manTgx
   },
   {
@@ -73,6 +93,11 @@ export const trucks = [
     fuelTank: 1100,
     consumption: 28,
     payload: 25,
+    cabin: 'BigSpace',
+    wheelFormula: '4x2',
+    gearbox: 'PowerShift 12-ст. АКПП',
+    maxSpeed: 115,
+    year: 2024,
     image: mercedesActros
   },
   {
@@ -86,6 +111,11 @@ export const trucks = [
     fuelTank: 1500,
     consumption: 26,
     payload: 24,
+    cabin: 'XG+ Super Space',
+    wheelFormula: '4x2',
+    gearbox: 'TraXon 12-ст. АКПП',
+    maxSpeed: 110,
+    year: 2024,
     image: dafXg
   },
   {
@@ -99,6 +129,11 @@ export const trucks = [
     fuelTank: 1100,
     consumption: 27,
     payload: 24,
+    cabin: 'T High, 2.5 м',
+    wheelFormula: '4x2',
+    gearbox: 'Optidriver 12-ст. АКПП',
+    maxSpeed: 110,
+    year: 2023,
     image: renaultT
   },
   {
@@ -112,6 +147,11 @@ export const trucks = [
     fuelTank: 600,
     consumption: 38,
     payload: 20,
+    cabin: 'Day Cab',
+    wheelFormula: '8x4',
+    gearbox: 'I-Shift 12-ст. АКПП',
+    maxSpeed: 90,
+    year: 2024,
     image: volvoFmx
   },
   {
@@ -125,6 +165,11 @@ export const trucks = [
     fuelTank: 1000,
     consumption: 25,
     payload: 22,
+    cabin: 'Normal',
+    wheelFormula: '4x2',
+    gearbox: 'Opticruise 12-ст. АКПП',
+    maxSpeed: 105,
+    year: 2023,
     image: scaniaG410
   },
   {
@@ -138,6 +183,11 @@ export const trucks = [
     fuelTank: 500,
     consumption: 42,
     payload: 25,
+    cabin: 'Цельнометаллическая',
+    wheelFormula: '6x4',
+    gearbox: 'ZF 16-ст. МКПП',
+    maxSpeed: 90,
+    year: 2022,
     image: kamaz6520
   }
 ];
