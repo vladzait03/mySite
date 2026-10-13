@@ -16,11 +16,11 @@ export default function Navbar() {
           Авто<span>Груз</span>
         </Link>
 
-        {/* Основные ссылки (на десктопе) */}
         <div className={`${styles.navLinks} ${menuOpen ? styles.open : ''}`}>
           <Link to="/" onClick={closeMenu}>Главная</Link>
           <Link to="/catalog" onClick={closeMenu}>Каталог</Link>
           <Link to="/compare" onClick={closeMenu}>Сравнение</Link>
+          <Link to="/articles" onClick={closeMenu}>Статьи</Link>
           <Link to="/about" onClick={closeMenu}>О нас</Link>
           <Link to="/contacts" onClick={closeMenu}>Контакты</Link>
         </div>
@@ -30,7 +30,6 @@ export default function Navbar() {
             {theme === 'light' ? '🌙' : '☀️'}
           </button>
 
-          {/* Бургер для мобильных */}
           <button
             className={`${styles.burger} ${menuOpen ? styles.burgerOpen : ''}`}
             onClick={() => setMenuOpen(!menuOpen)}

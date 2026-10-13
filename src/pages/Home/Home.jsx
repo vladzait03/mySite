@@ -6,13 +6,14 @@ export default function Home() {
     <div className={styles.homePage}>
       <div className={styles.hero}>
         <div className={styles.heroContent}>
-          <span style={{ display: 'inline-block', padding: '5px 15px', backgroundColor: 'var(--accent-color)', color: '#fff', borderRadius: '20px', fontSize: '0.9rem', marginBottom: '20px' }}>
-            Учебный проект
-          </span>
-          <h1>База знаний по грузовым автомобилям</h1>
-          <p>Сравнивайте технические характеристики, изучайте спецификации двигателей и находите идеальную машину для ваших задач.</p>
+          <h1>Технические характеристики грузовых автомобилей</h1>
+          <p>
+            Сравнивайте мощность, крутящий момент, расход топлива и грузоподъёмность
+            седельных тягачей и магистральных грузовиков. Актуальные данные по моделям
+            Volvo, Scania, MAN, Mercedes-Benz, DAF и KAMAZ.
+          </p>
           <div className={styles.heroButtons}>
-            <Link to="/catalog" className="btn-primary">Перейти в каталог</Link>
+            <Link to="/catalog" className="btn-primary">Открыть каталог</Link>
             <Link to="/compare" className={styles.btnSecondary}>Сравнить модели</Link>
           </div>
         </div>

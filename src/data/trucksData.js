@@ -1,3 +1,14 @@
+import volvoFh16 from '../assets/trucks/volvo-fh16.jpg';
+import scaniaR500 from '../assets/trucks/scania-r500.jpg';
+import kamaz54901 from '../assets/trucks/kamaz-54901.jpg';
+import manTgx from '../assets/trucks/man-tgx.jpg';
+import mercedesActros from '../assets/trucks/mercedes-actros.jpg';
+import dafXg from '../assets/trucks/daf-xg.jpg';
+import renaultT from '../assets/trucks/renault-t.jpg';
+import volvoFmx from '../assets/trucks/volvo-fmx.jpg';
+import scaniaG410 from '../assets/trucks/scania-g410.jpg';
+import kamaz6520 from '../assets/trucks/kamaz-6520.jpg';
+
 export const trucks = [
   {
     id: 1,
@@ -10,13 +21,7 @@ export const trucks = [
     fuelTank: 1480,
     consumption: 32,
     payload: 25,
-    transmission: 'I-Shift 12-speed',
-    cabin: 'Globetrotter XL',
-    wheelFormula: '6x4',
-    maxSpeed: 120,
-    year: 2023,
-    description: 'Флагманский тягач Volvo для самых тяжелых и ответственных перевозок. Сочетает в себе максимальную мощность и комфорт водителя.',
-    image: 'https://s9.auto.drom.ru/photo/v2/_g32e1HGD8g31qsirBPgqwRPjpxYxSY_bxy6eZ1fnfQepAYOx2KAtvSRuJ5wP02RHNVY-pHcnLDfzDwM/gen1200.jpg'
+    image: volvoFh16
   },
   {
     id: 2,
@@ -29,13 +34,7 @@ export const trucks = [
     fuelTank: 1000,
     consumption: 28,
     payload: 24,
-    transmission: 'Opticruise 12-speed',
-    cabin: 'Highline',
-    wheelFormula: '4x2',
-    maxSpeed: 110,
-    year: 2022,
-    description: 'Надежный и экономичный тягач Scania. Идеальный выбор для дальних международных рейсов.',
-    image: 'https://d2e5b8shawuel2.cloudfront.net/vehicle/292972/hlv/original.jpg'
+    image: scaniaR500
   },
   {
     id: 3,
@@ -48,13 +47,7 @@ export const trucks = [
     fuelTank: 700,
     consumption: 30,
     payload: 20,
-    transmission: 'ZF 12AS2140',
-    cabin: 'Высокая',
-    wheelFormula: '4x2',
-    maxSpeed: 100,
-    year: 2023,
-    description: 'Новое поколение российских грузовиков. Современный дизайн, комфортная кабина и надежная агрегатная база.',
-    image: 'https://www.kamazik.ru/upload/iblock/a4d/5p4qslyygnoxzy0c89kxzc8ncqtbdnm7.jpg'
+    image: kamaz54901
   },
   {
     id: 4,
@@ -67,13 +60,7 @@ export const trucks = [
     fuelTank: 1200,
     consumption: 29,
     payload: 25,
-    transmission: 'TipMatic 12-speed',
-    cabin: 'XXL',
-    wheelFormula: '6x4',
-    maxSpeed: 115,
-    year: 2023,
-    description: 'Немецкая инженерная мысль в действии. MAN TGX предлагает лучший баланс между мощностью и топливной экономичностью.',
-    image: 'https://auto-fleet.ru/wp-content/uploads/2024/01/WhatsApp-Image-2024-01-17-at-11.46.11.jpeg'
+    image: manTgx
   },
   {
     id: 5,
@@ -86,12 +73,71 @@ export const trucks = [
     fuelTank: 1100,
     consumption: 28,
     payload: 25,
-    transmission: 'PowerShift 12-speed',
-    cabin: 'BigSpace',
-    wheelFormula: '6x2',
-    maxSpeed: 110,
-    year: 2022,
-    description: 'Эталон комфорта и безопасности. Actros оснащен передовыми системами помощи водителю.',
-    image: 'https://d2e5b8shawuel2.cloudfront.net/vehicle/301381/hlv/original.jpg'
+    image: mercedesActros
+  },
+  {
+    id: 6,
+    brand: 'DAF',
+    model: 'XG+',
+    type: 'Седельный тягач',
+    engine: 'PACCAR MX-13 Euro 6',
+    power: 530,
+    torque: 2600,
+    fuelTank: 1500,
+    consumption: 26,
+    payload: 24,
+    image: dafXg
+  },
+  {
+    id: 7,
+    brand: 'Renault Trucks',
+    model: 'T High',
+    type: 'Седельный тягач',
+    engine: 'DE13 Euro 6',
+    power: 520,
+    torque: 2550,
+    fuelTank: 1100,
+    consumption: 27,
+    payload: 24,
+    image: renaultT
+  },
+  {
+    id: 8,
+    brand: 'Volvo',
+    model: 'FMX',
+    type: 'Самосвал',
+    engine: 'D13K Euro 6',
+    power: 540,
+    torque: 2600,
+    fuelTank: 600,
+    consumption: 38,
+    payload: 20,
+    image: volvoFmx
+  },
+  {
+    id: 9,
+    brand: 'Scania',
+    model: 'G410',
+    type: 'Седельный тягач',
+    engine: 'DC13 Euro 6',
+    power: 410,
+    torque: 2150,
+    fuelTank: 1000,
+    consumption: 25,
+    payload: 22,
+    image: scaniaG410
+  },
+  {
+    id: 10,
+    brand: 'KAMAZ',
+    model: '6520',
+    type: 'Самосвал',
+    engine: 'KAMAZ-740 Euro 4',
+    power: 400,
+    torque: 1900,
+    fuelTank: 500,
+    consumption: 42,
+    payload: 25,
+    image: kamaz6520
   }
 ];

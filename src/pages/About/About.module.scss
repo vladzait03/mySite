@@ -10,38 +10,48 @@
   color: var(--text-primary);
 }
 
+.subtitle {
+  font-size: 1.5rem;
+  margin: 35px 0 15px;
+  color: var(--text-primary);
+}
+
 .text {
   margin-bottom: 20px;
   font-size: 1.1rem;
   color: var(--text-secondary);
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
-// ============ ПЛАНШЕТЫ И МОБИЛЬНЫЕ ============
+.list {
+  list-style: none;
+  padding-left: 0;
+
+  li {
+    padding: 8px 0 8px 25px;
+    position: relative;
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+
+    &::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--accent-color);
+      font-weight: 700;
+    }
+  }
+}
+
 @media (max-width: 1024px) {
-  .aboutPage {
-    padding: 50px 20px;
-  }
-
-  .title {
-    font-size: 2.1rem;
-  }
-
-  .text {
-    font-size: 1rem;
-  }
+  .aboutPage { padding: 50px 20px; }
+  .title { font-size: 2.1rem; }
+  .text { font-size: 1rem; }
 }
 
 @media (max-width: 768px) {
-  .aboutPage {
-    padding: 40px 15px;
-  }
-
-  .title {
-    font-size: 1.8rem;
-  }
-
-  .text {
-    font-size: 0.95rem;
-  }
+  .aboutPage { padding: 40px 15px; }
+  .title { font-size: 1.8rem; }
+  .subtitle { font-size: 1.25rem; }
+  .text { font-size: 0.95rem; }
 }

@@ -3,7 +3,6 @@ import styles from './Footer.module.scss';
 
 export default function Footer() {
   useEffect(() => {
-    // Логика скрипта LiveInternet
     const img = document.getElementById('licnt7C2E');
     if (img) {
       img.src =
@@ -12,7 +11,7 @@ export default function Footer() {
         (typeof screen === 'undefined'
           ? ''
           : ';s' + screen.width + '*' + screen.height + '*' +
-          (screen.colorDepth ? screen.colorDepth : screen.pixelDepth)) +
+            (screen.colorDepth ? screen.colorDepth : screen.pixelDepth)) +
         ';u' + escape(document.URL) +
         ';h' + escape(document.title.substring(0, 150)) +
         ';' + Math.random();
@@ -22,13 +21,8 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.counters}>
-        {/* Счетчик LiveInternet */}
         <div className={styles.counter}>
-          <a
-            href="https://www.liveinternet.ru/click"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://www.liveinternet.ru/click" target="_blank" rel="noopener noreferrer">
             <img
               id="licnt7C2E"
               width="88"
@@ -41,13 +35,8 @@ export default function Footer() {
           </a>
         </div>
 
-        {/* Счетчик Rambler Top100 */}
         <div className={styles.counter}>
-          <a
-            href="https://top100.rambler.ru/navi/7752734/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://top100.rambler.ru/navi/7752734/" target="_blank" rel="noopener noreferrer">
             <img
               src="https://counter.rambler.ru/top100.cnt?pid=7752734"
               alt="Rambler's Top100"
@@ -60,7 +49,7 @@ export default function Footer() {
       </div>
 
       <p className={styles.copyright}>
-        © {new Date().getFullYear()} АвтоГруз. Учебный проект.
+        © {new Date().getFullYear()} АвтоГруз - учебный проект.
       </p>
     </footer>
   );
