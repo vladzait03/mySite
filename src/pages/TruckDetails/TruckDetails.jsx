@@ -8,76 +8,61 @@ export default function TruckDetails() {
 
   if (!truck) {
     return (
-      <div className={styles.detailsPage}>
+      <div className={styles.notFound}>
         <h1>Грузовик не найден</h1>
-        <Link to="/catalog" className={styles.backBtn}>← Вернуться в каталог</Link>
+        <Link to="/catalog" className="btn-primary">← Вернуться в каталог</Link>
       </div>
     );
   }
 
+  const specs = [
+    { label: 'Двигатель', value: truck.engine, unit: '' },
+    { label: 'Мощность', value: truck.power, unit: ' л.с.' },
+    { label: 'Крутящий момент', value: truck.torque, unit: ' Нм' },
+    { label: 'Коробка передач', value: truck.gearbox, unit: '' },
+    { label: 'Тип кабины', value: truck.cabin, unit: '' },
+    { label: 'Колёсная формула', value: truck.wheelFormula, unit: '' },
+    { label: 'Грузоподъёмность', value: truck.payload, unit: ' т' },
+    { label: 'Объём топливного бака', value: truck.fuelTank, unit: ' л' },
+    { label: 'Расход топлива', value: truck.consumption, unit: ' л/100км' },
+    { label: 'Максимальная скорость', value: truck.maxSpeed, unit: ' км/ч' },
+    { label: 'Год выпуска', value: truck.year, unit: '' },
+  ];
+
   return (
     <div className={styles.detailsPage}>
-      <Link to="/catalog" className={styles.backBtn}>← Вернуться в каталог</Link>
+      <Link to="/catalog" className={styles.backLink}>← Вернуться в каталог</Link>
 
-      <div className={styles.truckHeader}>
+      <div className={styles.topBlock}>
         <div className={styles.imageWrapper}>
           <img src={truck.image} alt={`${truck.brand} ${truck.model}`} />
         </div>
-        <div className={styles.headerInfo}>
+
+        <div className={styles.infoBlock}>
           <h1>{truck.brand} {truck.model}</h1>
-          <span className={styles.typeBadge}>{truck.type}</span>
-          <p className={styles.description}>{truck.description}</p>
+          <span className={styles.badge}>{truck.type}</span>
         </div>
       </div>
 
-      <div className={styles.specsSection}>
-        <h2>Технические характеристики</h2>
-        <div className={styles.specsTable}>
-          <div className={styles.specRow}>
-            <span className={styles.label}>Двигатель</span>
-            <span className={styles.value}>{truck.engine}</span>
-          </div>
-          <div className={styles.specRow}>
-            <span className={styles.label}>Мощность</span>
-            <span className={styles.value}>{truck.power} л.с.</span>
-          </div>
-          <div className={styles.specRow}>
-            <span className={styles.label}>Крутящий момент</span>
-            <span className={styles.value}>{truck.torque} Нм</span>
-          </div>
-          <div className={styles.specRow}>
-            <span className={styles.label}>Коробка передач</span>
-            <span className={styles.value}>{truck.transmission}</span>
-          </div>
-          <div className={styles.specRow}>
-            <span className={styles.label}>Тип кабины</span>
-            <span className={styles.value}>{truck.cabin}</span>
-          </div>
-          <div className={styles.specRow}>
-            <span className={styles.label}>Колесная формула</span>
-            <span className={styles.value}>{truck.wheelFormula}</span>
-          </div>
-          <div className={styles.specRow}>
-            <span className={styles.label}>Грузоподъемность</span>
-            <span className={styles.value}>{truck.payload} т</span>
-          </div>
-          <div className={styles.specRow}>
-            <span className={styles.label}>Объем топливного бака</span>
-            <span className={styles.value}>{truck.fuelTank} л</span>
-          </div>
-          <div className={styles.specRow}>
-            <span className={styles.label}>Расход топлива</span>
-            <span className={styles.value}>{truck.consumption} л/100км</span>
-          </div>
-          <div className={styles.specRow}>
-            <span className={styles.label}>Максимальная скорость</span>
-            <span className={styles.value}>{truck.maxSpeed} км/ч</span>
-          </div>
-          <div className={styles.specRow}>
-            <span className={styles.label}>Год выпуска</span>
-            <span className={styles.value}>{truck.year}</span>
-          </div>
+      <div className={styles.specsCard}>
+        <h2 className={styles.specsTitle}>Технические характеристики</h2>
+
+        <div className={styles.specsGrid}>
+          {specs.map((spec, i) => (
+            <div className={styles.specItem} key={i}>
+              <span className={styles.label}>{spec.label}</span>
+              <span className={styles.value}>
+                {spec.value !== undefined && spec.value !== null && spec.value !== ''
+                  ? `${spec.value}${spec.unit}`
+                  : '—'}
+              </span>
+            </div>
+          ))}
         </div>
+      </div>
+
+      <div className={styles.actions}>
+        <Link to="/compare" className="btn-primary">Сравнить с другой моделью</Link>
       </div>
     </div>
   );
