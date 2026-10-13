@@ -17,5 +17,9 @@ export default function RouteTracker() {
     }
   }, [location]); // Срабатывает при каждом изменении URL
 
+  if (window.top100Counter && typeof window.top100Counter.trackPageview === 'function') {
+    window.top100Counter.trackPageview();
+  }
+
   return null; // Компонент ничего не рендерит
 }
