@@ -1,12 +1,12 @@
 .detailsPage {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 60px 20px;
+  padding: 40px 20px;
 }
 
-.backBtn {
+.backLink {
   display: inline-block;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   color: var(--text-secondary);
   font-weight: 500;
   transition: color 0.2s ease;
@@ -16,99 +16,154 @@
   }
 }
 
-.truckHeader {
+.topBlock {
   display: flex;
   gap: 40px;
-  margin-bottom: 40px;
-  flex-wrap: wrap;
+  background-color: var(--surface-color);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
+  margin-bottom: 30px;
 
   @media (max-width: 768px) {
     flex-direction: column;
+    gap: 0;
   }
 }
 
 .imageWrapper {
   flex: 1;
   min-width: 300px;
-  border-radius: 12px;
+  max-width: 550px;
   overflow: hidden;
-  box-shadow: var(--shadow);
 
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
+
+    @media (max-width: 768px) {
+      height: 250px;
+    }
   }
 }
 
-.headerInfo {
+.infoBlock {
   flex: 1;
-  min-width: 300px;
+  padding: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 
   h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+    font-size: 2.4rem;
+    margin-bottom: 15px;
+    line-height: 1.15;
   }
 
-  .typeBadge {
-    display: inline-block;
-    background-color: var(--bg-color);
-    color: var(--text-secondary);
-    padding: 6px 16px;
-    border-radius: 20px;
-    border: 1px solid var(--border-color);
-    margin-bottom: 20px;
-    align-self: flex-start;
-  }
+  @media (max-width: 768px) {
+    padding: 25px;
 
-  .description {
-    font-size: 1.1rem;
-    color: var(--text-secondary);
-    line-height: 1.6;
+    h1 {
+      font-size: 1.8rem;
+    }
   }
 }
 
-.specsSection {
+.badge {
+  display: inline-block;
+  width: fit-content;
+  background-color: var(--bg-color);
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+}
+
+// ================== Блок характеристик ==================
+.specsCard {
   background-color: var(--surface-color);
-  border-radius: 12px;
-  padding: 30px;
+  border-radius: 16px;
+  padding: 35px;
   box-shadow: var(--shadow);
   border: 1px solid var(--border-color);
+  margin-bottom: 30px;
 
-  h2 {
-    font-size: 1.5rem;
-    margin-bottom: 25px;
-    border-bottom: 2px solid var(--accent-color);
-    display: inline-block;
-    padding-bottom: 5px;
+  @media (max-width: 768px) {
+    padding: 25px 20px;
   }
 }
 
-.specsTable {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 25px;
+.specsTitle {
+  font-size: 1.4rem;
+  margin-bottom: 25px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--accent-color);
+  display: inline-block;
+
+  @media (max-width: 480px) {
+    font-size: 1.2rem;
+  }
 }
 
-.specRow {
+.specsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0 40px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+
+.specItem {
   display: flex;
-  flex-direction: column;
-  padding-bottom: 10px;
-  border-bottom: 1px solid var(--border-color);
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 14px 0;
+  border-bottom: 1px dashed var(--border-color);
 
   .label {
-    font-size: 0.85rem;
     color: var(--text-secondary);
-    text-transform: uppercase;
-    margin-bottom: 5px;
+    font-size: 0.95rem;
+    padding-right: 15px;
   }
 
   .value {
-    font-size: 1.1rem;
     font-weight: 600;
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  @media (max-width: 480px) {
+    .label {
+      font-size: 0.85rem;
+    }
+    .value {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+// ================== Кнопка "Сравнить" ==================
+.actions {
+  text-align: center;
+  margin-top: 20px;
+}
+
+// ================== Страница "Не найдено" ==================
+.notFound {
+  max-width: 600px;
+  margin: 80px auto;
+  padding: 40px 20px;
+  text-align: center;
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 25px;
   }
 }
