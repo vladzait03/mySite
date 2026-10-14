@@ -2,6 +2,16 @@ import { Link } from 'react-router-dom';
 import styles from './Home.module.scss';
 
 export default function Home() {
+  const handleCompareClick = () => {
+    if (window._tmr) {
+      window._tmr.push({
+        id: "3800987", // Ваш ID счетчика
+        type: "reachGoal",
+        goal: "Click_Compare_Button" // Название вашего события
+      });
+    }
+  };
+  
   return (
     <div className={styles.homePage}>
       <div className={styles.hero}>
